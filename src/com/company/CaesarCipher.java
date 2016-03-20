@@ -5,14 +5,13 @@ package com.company;
  */
 public class CaesarCipher {
 
-    public static String encryptCaesar (String text) {
+    public static String encryptCaesar (String text, int key) {
         char[] chars = text.toCharArray();
         for (int i = 0; i < text.length(); i++) {
             char c = chars[i];
             if (c >= 32 && c <= 127) {
-
                 int x = c - 32;
-                x = (x + 13) % 96; //13
+                x = (x + key) % 96; //13
                 if (x < 0) {
                     x += 96;
                 }
@@ -22,14 +21,14 @@ public class CaesarCipher {
         return new String(chars);
     }
 
-    public static String decryptCaesar(String text) {
+    public static String decryptCaesar(String text, int key) {
 
         char[] chars = text.toCharArray();
         for (int i = 0; i < text.length(); i++) {
             char c = chars[i];
             if (c >= 32 && c <= 127) {
                 int x = c - 32;
-                x = (x - 13) % 96;  //13
+                x = (x - key) % 96;  //13
                 if ( x < 0) {
                     x += 96;
                 }
