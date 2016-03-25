@@ -7,25 +7,21 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        Scanner scanner = new Scanner(System.in);
-        //"C:\\Test\\TestFile.txt"
+//        Scanner scanner = new Scanner(System.in);
 //
-//        System.out.println("Enter path to file: ");
-//        String myText = MyFileReader.fileReader("C:\\Test\\TestFile.txt");
+//        System.out.println("Enter file path:");
 //
-//        System.out.println(myText);
+//        String fileText = MyFileReader.fileReader(scanner.nextLine());
 //
-//        String encrypted = CaesarCipher.encryptCaesar("AAAAA aaaa BBBB bbbb", 1);
-//        System.out.println(encrypted);
+//        System.out.println("Choose encryption method:");
+
+        PolibiusSquare polibiusSquare = new PolibiusSquare();
+
+        PolibiusSquare.input();
+        polibiusSquare.encrypt();
+
+//        PolibiusSquare.searchChar(4, 4);
 //
-//        String decrypted = CaesarCipher.decryptCaesar(encrypted, 13);
-//        System.out.println(decrypted);
-
-
-        String encrypt = VigenereCipher.encryptVigenere("I have nothing but my honour! AAAA BBBB SKGDOJOGHET}#OI%P32];2ffffffff");
-
-        System.out.println(encrypt);
-
-        System.out.println(VigenereCipher.decryptVigenere(encrypt));
+//        System.out.println(PolibiusSquare.searchCoordinates('Z'));
     }
 }
