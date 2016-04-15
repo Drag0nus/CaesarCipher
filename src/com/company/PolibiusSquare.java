@@ -7,17 +7,17 @@ package com.company;
 public class PolibiusSquare {
 
     static char[][] alpha = {{'A', 'B', 'C', 'D', 'E'},
-            {'F', 'G', 'H', 'I', 'J'},
-            {'K', 'L', 'M', 'N', 'O'},
-            {'P', 'Q', 'R', 'S', 'T'},
-            {'U', 'V', 'W', 'Y', 'Z'}};
+                             {'F', 'G', 'H', 'I', 'J'},
+                             {'K', 'L', 'M', 'N', 'O'},
+                             {'P', 'Q', 'R', 'S', 'T'},
+                             {'U', 'V', 'W', 'Y', 'Z'}};
 
-    static String str = "I HAVE NOTHING BUT MY HONOUR!";
+    static String str = "MY NAME IS PASHA";
 
     public static void input() {
 
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < alpha.length; i++) {
+            for (int j = 0; j < alpha.length; j++) {
                 System.out.print(alpha[i][j] + " ");
             }
             System.out.println();
@@ -35,7 +35,7 @@ public class PolibiusSquare {
 
                 if (ch == alpha[i][j]) {
                     //System.out.println("Coordinates of " + ch + " are: " + "[" + (i + 1) + ", " + (j + 1) + "]");
-                    result = "[" + (i) + ", " + (j) + "]";
+                    result = String.valueOf(i) + String.valueOf(j) + " ";
                     //System.out.print("[" + (i + 1) + (j + 1) + "]");
                 }
             }
@@ -75,6 +75,13 @@ public class PolibiusSquare {
     }
 
     public void decrypt() {
+        int x, y;
+
+        for(int i = 0; i < alpha.length; i++) {
+            for(int j = 0; j < alpha.length; j++) {
+
+            }
+        }
 
     }
 }

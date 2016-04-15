@@ -1,27 +1,37 @@
 package com.company;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) throws IOException {
 
-//        Scanner scanner = new Scanner(System.in);
-//
-//        System.out.println("Enter file path:");
-//
-//        String fileText = MyFileReader.fileReader(scanner.nextLine());
-//
-//        System.out.println("Choose encryption method:");
 
-        PolibiusSquare polibiusSquare = new PolibiusSquare();
 
-        PolibiusSquare.input();
-        polibiusSquare.encrypt();
+        String text = "I have nothing but my honour.";
 
-//        PolibiusSquare.searchChar(4, 4);
-//
-//        System.out.println(PolibiusSquare.searchCoordinates('Z'));
+        String key = "uwotmate";
+
+        System.out.println("XOR:------------------------------");
+
+        VernamCipher vernamCipher = new VernamCipher();
+
+        byte[] encrypted = vernamCipher.encrypt(text, key);
+
+        System.out.println(Arrays.toString(encrypted));
+
+        String decryprted = vernamCipher.decrypt(encrypted, key);
+
+        System.out.println(decryprted);
+
+        System.out.println(Character.BYTES);
+
+        vernamCipher.vernam();
+
+
+
+
     }
 }
